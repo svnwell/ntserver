@@ -1,3 +1,5 @@
+"""Socket test client."""
+
 import time
 import socket
 
@@ -8,9 +10,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
 
     while True:
-        s.sendall(time.strftime('%Y/%m/%d %H:%M:%S').encode())
+        # s.sendall(time.strftime('%Y/%m/%d %H:%M:%S').encode())
         rsp = s.recv(1024)
 
         print(f"Received: {rsp!r}")
 
-        time.sleep(1)
+        # time.sleep(1)
